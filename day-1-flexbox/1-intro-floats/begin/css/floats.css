@@ -1,43 +1,127 @@
 /* Border box declaration 
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
-  box-sizing: border-box;
-}
-/* inherit border-box on all elements in the universe and before and after
- */
-*, 
-*:before, 
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-	font-family: Arial, Geneva, sans-serif;
-}
-a {
-	color: #2772B0;
-}
-.wrapper {
-	width: 97%;
-	max-width: 1200px;
-	margin: 0 auto;
-	float: none;
-	background-color: #fff;
-}
-
-div img {
-	width: 100%;
-	max-width: 225px; 
-}
-
-/* grid system -- mobile first! */
-
-
-/* Mobile Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
-
-}
-/* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
-
-}
+	box-sizing: border-box;
+  }
+  /* inherit border-box on all elements in the universe and before and after
+   */
+  *, 
+  *:before, 
+  *:after {
+	box-sizing: inherit;
+  }
+  
+  body {
+	  font-family: Arial, Geneva, sans-serif;
+  }
+  a {
+	  color: #2772B0;
+  }
+  .wrapper {
+	  width: 97%;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	  float: none;
+	  background-color: #fff;
+  }
+  
+  div img {
+	  width: 100%;
+	  max-width: 225px; 
+  }
+  
+  article {
+	  margin: 0 5%;
+  }
+  .row-1 article,
+  .row-3 article:first-child {
+	  background-color: lightgoldenrodyellow;
+  }
+  .row-2 article {
+	  background-color: lightcoral;
+  }
+  .row-3 article:last-child {
+	  background-color: lightskyblue;
+  }
+  .row-4 article {
+	  background-color: lightpink;
+  }
+  
+  
+  .clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+  }
+  
+  /* grid system -- mobile first! */
+  
+  
+  /* Mobile Landscape Screen Sizes */
+  @media only screen and (min-width: 480px)  {
+  
+	  div img {
+		  width: 100%;
+	  }
+	  article {
+		  margin: 0 0 0 5%;
+	  }
+  
+	  .row-1 article,
+	  .row-2 article {
+		  float: left;
+		  width: 44%;
+	  }
+	  
+	  .row-3 article,
+	  .row-4 article  {
+		  float: left;
+		  width: 93%;
+	  }
+  
+	  .clearfix::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+	  }
+  
+  }
+  /* Desktop screen Sizes */
+  @media only screen and (min-width: 768px) {
+  
+	  article {
+		  margin: 0 0 0 5%;
+	  }
+  
+	  .row-1 article {
+		  float: left;
+		  width: 20%;
+	  }
+  
+	  .row-2 article {
+		  float: left;
+		  width: 45%;
+	  }
+	  
+	  .row-3 article {
+		  float: left;
+	  }
+	  .row-3 article:first-child {
+		  width:20%;
+		  
+	  }
+	  .row-3 article:last-child {
+		  width: 70%;
+	  }
+  
+	  .row-4 article {
+		  width: 95%;
+		  margin-left: 5%;
+	  }
+  
+	  .clearfix::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+	  }
+  }
